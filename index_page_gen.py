@@ -7,8 +7,15 @@ template = templateEnv.get_template("pre_home.html")
 
 themes = [ name for name in os.listdir("./output") if os.path.isdir(os.path.join("./output", name)) ]
 themes=sorted(themes, key=lambda s: s.lower())
-themes.remove(".git")
-themes.remove("static-css")
+try:
+    themes.remove(".git")
+except Exception, e:
+    print ".git is not here. hew"
+try:
+    themes.remove("static-css")
+except Exception, e:
+    print "static-css is not here. hew"
+
 
 print template.render(themes=themes)
 
