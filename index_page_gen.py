@@ -10,11 +10,18 @@ themes=sorted(themes, key=lambda s: s.lower())
 try:
     themes.remove(".git")
 except Exception, e:
-    print ".git is not here. hew"
+    #print ".git is not here. hew"
+    pass
 try:
     themes.remove("static-css")
 except Exception, e:
-    print "static-css is not here. hew"
+    #print "static-css is not here. hew"
+    pass
+try:
+    themes.remove("README.rst")
+except Exception, e:
+    #print "README.rst is not here. hew"
+    pass
 
 
 print template.render(themes=themes)
