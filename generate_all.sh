@@ -12,7 +12,7 @@ HOME_HTML=home-$(date +"%Y-%m-%d").html
 
 if [ ! -d $THEMES ]; then
     echo -e '\E[37;44m'"\033[1mStep 0: Cloning from git repository\033[0m"
-    git clone --recursive https://github.com/getpelican/pelican-themes ~/pelican-themes
+    git clone --recursive https://github.com/getpelican/pelican-themes ./pelican-themes
 fi
 
 # STEP1: Pull from git
