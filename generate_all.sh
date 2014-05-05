@@ -55,6 +55,7 @@ echo "<?php include_once(\"$HOME_HTML\");?>" > index.php
 
 # STEP5: move static/, index.php, and home.html file to output folder
 echo -e '\E[37;44m'"\033[1mStep 5: Move static and index.html files..\033[0m"
+cp -r static output
 mv index.php output/
 mv $HOME_HTML output/
 
